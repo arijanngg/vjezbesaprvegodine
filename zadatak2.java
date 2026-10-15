@@ -1,35 +1,35 @@
-package vjezbeinfo2;
-
-import java.util.Scanner;
+package predavnjazavrsni;
 
 public class zadatak2 {
 
-	 public static int nzd(int a, int b) {
-	        while (b != 0) {
-	            int temp = b;
-	            b = a % b;
-	            a = temp;
-	        }
-	        return a;
-	    }
-
-	    public static void main(String[] args) {
-	        Scanner sc = new Scanner(System.in);
-
-	        System.out.print("Unesite broj A: ");
-	        int a = sc.nextInt();
-
-	        System.out.print("Unesite broj B: ");
-	        int b = sc.nextInt();
-
-	        int rezultat = nzd(a, b);
-
-	        System.out.println("NZD je: " + rezultat);
+	public static void najproduktivniji( int[][] A) {
+		
+		int brojzaposlenih = A.length;
+		int brojdana = A[0].length;
+		int maxukupno = 0 ; 
+		int najindex= 0;
+		int suma = 0;
+		for(int i = 0 ; i < brojzaposlenih ; i ++) {
+		suma = 0;
+			for(int j = 0 ; j < brojdana; j ++) {
+				suma += A[i][j];
+			}
+			if (suma > maxukupno) {
+				maxukupno = suma;
+				najindex=i;
+			}
+		}
+		System.out.println(najindex);
+		System.out.println(maxukupno);
+	}
 	
 	
 	
 	
-	
+	public static void main(String[] args) {
+//firma prati rad zasposlenijh tokom n dana. matrica zaposlenih I[j] cuva koliko je i-ti zaposlenih uradio
+//zadataka j-tog dana. potrebno je naci zasposlenog koji u citavom tom periodu od n dana uradio najvise zadataka.
+
 	
 	}
 

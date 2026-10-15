@@ -1,32 +1,31 @@
-package vjezbazaispit;
+package ponovnevjezbe;
 
 import java.util.Scanner;
 
 public class PETI {
 
 	public static void main(String[] args) {
+		// Dat je trocifren broj.
+		// Odrediti broj koji se dobija zamjenom prve i posljednje cifre.
 
-		// Dimenzije pravougaonika su 543 i 130.
-		// Skicirati algoritam (napisati program)
-		// koji računa koliko kvadrata stranice 65
-		// je moguće izrezati iz tog pravougaonika.
+		
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Unesite trocifren broj");
+		String trocifrenbroj = sc.nextLine();
+		String novibroj = " ";
+		
+		
+		novibroj = novibroj + trocifrenbroj.charAt(2) + trocifrenbroj.charAt(1) + trocifrenbroj.charAt(0);
+		
+		System.out.println("Novi broj je = " + novibroj);
 		
 		
 		
-	
 		
-		System.out.println("Dimenzije pravougaonika su 543 i 130. a Kvadrata 65");
 		
-		int a = 543;
-		int b = 130;
-		int c = 65;
 		
-		int povrsina1 = a * b;
-		int povrsina2 = c^2;
 		
-		int brojkvadrata = povrsina1 / povrsina2;
-		
-		System.out.println("broj kvadrata u pravougaoniku je " + brojkvadrata);
 		
 		
 	}

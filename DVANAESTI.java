@@ -1,33 +1,44 @@
-package vjezbazaispit;
+package ponovnevjezbe;
 
 import java.util.Scanner;
-
-import jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput;
 
 public class DVANAESTI {
 
 	public static void main(String[] args) {
-
 		
-		// Korisnik unosi brojeve.
-		// Program sabira sve unesene brojeve dok korisnik ne unese 0.
-		// Na kraju ispisati zbir.
+		//Pronaći indeksnu poziciju poslednjeg razmaka u stringu,
+		// pretražujući od kraja stringa. Npr. za
+		// unijeto 'Pera ima devojku', rezultat je 8.
 		
-		
-		
-
 		Scanner sc = new Scanner ( System.in);
 		
-		System.out.println(" Unesite brojeve ako zelite da zaustavite ukucajte 0");
-		int broj = sc.nextInt();
-		int zbirunesenih = 0;
+		System.out.println("Unesite recenicu");
+		String recenica = sc.nextLine();
 		
-		while (broj > 0 ) {
+		
+		boolean indikator = false ;
+		
+		int indekskraja = recenica.length() - 1;
+		while (indekskraja >=0 && !indikator) {
 			
-			zbirunesenih += broj;
+			if (recenica.charAt(indekskraja) == ' ' ) {
+				
+				indikator= true;
+				
+			}
+			indekskraja --;
+			
 		}
-				System.out.println("");
 		
+		if (indikator ) {
+			System.out.println(" razmak je na poziciji " + indekskraja);
+		} else {	
+			System.out.println("Nema razmaka u stringu");
+	
+			
+			
+			
+		}
 		
 	}
 

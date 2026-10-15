@@ -1,41 +1,30 @@
-package vjezbeinfo2;
-
-import java.util.Scanner;
+package sortiranje;
 
 public class zadatak6 {
 
-	public static boolean palindrom (int n ) {
-		
-		int original = n;
-		int obrnuti = 0;
-		
-		while (n > 0 ) {
-			
-			int cifra = n % 10;
-			obrnuti = obrnuti * 10 + cifra;
-			n = n/10;
-			
-		}
-		return original==obrnuti;
-		
-	}
-	
-	
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner (System.in);
-		System.out.println("Unesi broj n");
-		int n = sc.nextInt();
-		
-		if (palindrom(n)) {
-			
-			System.out.println("broj je palindrom");
-		}else {
-			
-			System.out.println("broj nije palindrom");
-		}
-		
-		
+
+		 int[] niz = {5, 2, 9, 1, 7};
+		 
+		 for ( int i = 0 ; i < niz.length - 1 ; i ++) {
+			 int maxindex= i ; 
+			 for (int j = i+1 ; j < niz.length ; j ++) {
+				 if ( niz[j] > niz[maxindex] ) {
+					 maxindex= j;
+					 
+					 
+					 
+				 }
+				 
+			 }
+			 int temp = niz[i];
+			 niz[i] = niz[maxindex];
+			 niz[maxindex]=temp;
+		 }
+		 for ( int broj : niz) {
+			 System.out.print(broj + " ");
+		 } 
+		 
 	}
 
 }

@@ -1,32 +1,27 @@
-package Vjeybe;
+package predavanje;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class treci {
 
 	public static void main(String[] args) {
 
-		/*. Dat je petocifreni prirodan broj koji predstavlja broj stambene jedinice u zgradi. Na
-		osnovu zadatog broja potrebno je odrediti sprat na kome se nalazi stambena jedinica.
-		Poznato je da se to može otkriti kada se na vrijednost pretposlednje cifre zadatog broja
-		doda vrijednost poslednje cifre. Štampati taj zbir. n = abcde*/
-		
-		
-		
+		int N;
+		BigInteger p=BigInteger.ONE;
 		Scanner sc = new Scanner (System.in);
 		
-		System.out.println("Unesi petocifren broj");
-		int broj = sc.nextInt();
+		System.out.println("Unesi N");
+		N = sc.nextInt();
 		
-		int e = broj % 10;
-		int d = (broj /10) % 10;
+		if(N>=0) {
 		
-		int stambenajedinica = e + d;
-		
-		 System.out.println("Broj sprata je " + stambenajedinica);
-		
-		
-		
+		for (int i = 2 ; i <= N; i ++) 
+			p*=i;
+		System.out.printf("%d! = %d", N, p);
+		}
+		else 
+			System.out.printf("Nije prirodni broj");
 	}
 
 }

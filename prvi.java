@@ -1,4 +1,4 @@
-package vjezbazaispit;
+package predavanje;
 
 import java.util.Scanner;
 
@@ -7,32 +7,34 @@ public class prvi {
 	public static void main(String[] args) {
 
 		
-		//Za Milicu i Anu se čuva koliko puta su obišle teren u 40 minuta.
-		// Međutim, prilikom unosa podataka desila se zabuna, pa je u varijabli
-		// x sačuvana vrijednost koja je trebala biti sačuvana u varijabli
-		// y i obrnuto. Skicirati algoritam (napisati program) koji mijenja mjesta
-		// vrijednostima u promjenljivim x i y.
-		// Npr. ako je x = 7 i y = 10, poslije izvršavanja koda varijable su x=10 i y=7.
-	
-	
-		Scanner sc = new Scanner (System.in);
+		int a, b , c , min , max;
 		
 		
-		System.out.println("unesite vrijednost x");
-		int x = sc.nextInt();
-		System.out.println("unesite vrijednost y");
-		int y = sc.nextInt();
+		Scanner u = new Scanner (System.in);
 		
-	
-		int pomocnavarijabla = x;
+		System.out.print("Unesi a,b i c ");
+		a = u.nextInt();
+		b = u.nextInt();
+		c = u.nextInt();
 		
-		x = y;
 		
-		y= pomocnavarijabla ;
-	
-		System.out.println(" x je sad " + x + " a y je sada " + y);
+		min = a;
+		if(min>b) 
+			min = b;
+		 if (min>c)
+		min=c;
+		 
+		 max = a;
+			if(max<b) 
+				max = b;
+			 if (max<c)
+			max=c; 
+		 
 		
-	
+		//System.out.printf("Najmanji broj je  %d, a najveci broj je %d", min,max);
+		
+		System.out.println("najmanji broj je " + min + " a najveci broj je " + max);
+		
 	}
 
 }

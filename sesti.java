@@ -1,46 +1,23 @@
-package Vjeybe;
-
-import java.util.Scanner;
+package VjezbaZaIspit;
 
 public class sesti {
 
 	public static void main(String[] args) {
-/*Napisati program koji za broj N računa aritmetičku sredinu cifara tog broja.*/
-		
-		Scanner sc = new Scanner ( System.in);
-		
-		System.out.println("Unesite n ");
-		int n = sc.nextInt();
-		
-		int broj = n;
-		int suma = 0;
-		int brojcifara = 0;
+
+		/*Dimenzije pravougaonika su 543 i 130. Skicirati algoritam (napisati program) koji računa koliko kvadrata stranice 65
+		// je moguće izrezati iz tog pravougaonika.*/
 		
 		
-		while (broj >0) {
-			
-			suma += broj %10; // suma = suma + broj % 10
-			brojcifara ++; // brojcifara = brojcifara + 1
-			broj/=10;
-			}
+		int a = 543;
+		int b = 130;
+		int c = 65;
 		
-		if (brojcifara == 0) {
-			
-			System.out.println(" aritmeticki niz je 0");
-			
-		} else {
-			
-			double aritmetickasredina = (double) suma / brojcifara;
-			System.out.println("aritmeticki niz je " + aritmetickasredina );
-		} 
+		int P = a * b ;
+		int R = c^2;
 		
-			
-			
+		int K = P / R;
 		
-		
-		
-		
-		
+		System.out.println("Moze stati : " + K);
 		
 		
 		

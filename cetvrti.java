@@ -1,4 +1,4 @@
-package Vjeybe;
+package predavanje;
 
 import java.util.Scanner;
 
@@ -6,33 +6,26 @@ public class cetvrti {
 
 	public static void main(String[] args) {
 
-	/*Skicirati algoritam (napisati program) kojim se na osnovu temperature vode određuje
-	njeno agregatno stanje. Ako je temperatura:
-	• viša od 0 C i niža od 100C - agregatno stanje je tečno
-	• ne viša od 0 C - agregatno stanje je čvrsto,
-	• ne niža od 100 C - agregatno stanje je gasovito.
-	Za temperaturu od tačno 0 smatra se da je agregatno stanje čvrsto, a za tačno 100 da je
-	gasovito.*/	
+		int N, cifNM, cifNV;
+		Scanner u = new Scanner (System.in);
 		
-	
-		Scanner sc = new Scanner (System.in);
+		System.out.print("Unesite N: ");
+		N = u.nextInt();
 		
-		System.out.println("unijeti temperaturu");
-		int temperatura = sc.nextInt();
+		if (N<0)
+			N = -N;
 		
-		if (temperatura>0 && temperatura <100) {
-			
-			System.out.println("agregatno stanje tecno");
-		} else if ( temperatura < 0) {
-			
-			System.out.println("agregatno stanje cvrsto");
-			
-		} else {
-			System.out.println("agregatno stanje gasovito");
+		cifNM = cifNV= N%10;
+		N = N /10;
+		
+		while (N>0) {
+			cifNV = N%10;
+			N= N/10;
 		}
-		
-		
-		
+		if ( cifNM == cifNV)
+		System.out.print("Iste");
+		else 
+			System.out.print("Razlicite");
 	}
 
 }

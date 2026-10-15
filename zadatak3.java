@@ -1,39 +1,37 @@
-package vjezbeinfo2;
-
-import java.util.Scanner;
+package sortiranje;
 
 public class zadatak3 {
 
-	
-	public static  int zbirkvadrata (int n ) {
-		int zbir = 0;
+	public static void sortiraj ( int[] niz) {
 		
-		while (n>0) {
-			
-			int cifra = n % 10; 
-			zbir += cifra * cifra; 
-			n= n/10;
-			
+		for ( int i = 0 ; i < niz.length-1; i ++) {
+			for ( int j = 0 ; j <niz.length-1-i; j ++) {
+				if (Math.abs(niz[j] ) > Math.abs(niz[j+1])) {
+					int temp = niz[j];
+					niz[j] = niz[j+1];
+					niz[j+1] = temp;
+					
+				}
+			}
 		}
-		return zbir;
+		System.out.println("Novi niz je: "   );
+		for ( int broj : niz) {
+			System.out.print(broj + " ");
+		}
+		
+		
 	}
 	
 	
 	public static void main(String[] args) {
+		
+		int [] niz = {1,9,7,-2,-1,-5,-10};
+		
+		sortiraj (niz);
+		
+		
+		
 
-		Scanner sc = new Scanner (System.in);
-		
-		
-		System.out.println("unesite broj n :" );
-		int n = sc.nextInt();
-		
-		int rezultat = zbirkvadrata (n);
-		
-		System.out.println("Zbir kvadrata je " + rezultat);
-		 
-		
-		
-		
 	}
 
 }

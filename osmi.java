@@ -1,64 +1,32 @@
-package zz;
+package VjezbaZaIspit;
+
+import java.util.Scanner;
 
 public class osmi {
 
-	public static int[][] bilans ( String [][] matrica){
-		
-		int redovi = matrica.length;
-		int kolone = matrica[0].length; 
-	
-		int[][] bilans = new int [redovi][kolone];
-		
-		for (int i = 0 ; i < matrica.length; i ++) {
-			for(int j = 0 ; j <matrica[0].length; j ++) {
-				
-				String s= matrica[i][j];
-				int suma = 0;
-				int x = 0 ;
-				while(x<s.length()) {
-					char c = s.charAt(x);
-					x++;
-					int broj = 0;
-					while(x<s.length() && s.charAt(x) != ' ') {
-						char f = s.charAt(x);
-						broj = broj * 10 +(f-'0');
-						x++;
-						
-						
-					}
-					if(c=='S') {
-						suma += broj;
-					}else if(c=='B') {
-						suma-= broj;
-					}
-					x++;
-				}
-				bilans[i][j]= suma;
-			
-				
-			}
-			}
-		return bilans;
-		}
-
-	
-	
 	public static void main(String[] args) {
-		String[][] trades = {
-	            {"S50 S40 B50 B100", "B200 S100", "S30 S70"},
-	            {"B10 B20 S50", "S500 B300", "B100 B50 S20"},
-	            {"S100 S200 B50", "B80 B20", "S60 B60"}
-	        };
-	
-		int[][] rezultat = bilans(trades);
+
+		// Skicirati algoritam (napisati program) koji računa X**n
+		// koristeći petlju (bez operatora za stepenovanje)
 		
-		System.out.println("nova matrica : ");
-		for(int i = 0 ; i <rezultat.length; i ++) {
-			for(int j = 0 ; j <rezultat[0].length ; j ++) {
-				System.out.print(rezultat[i][j] + " ");
-			}
-			System.out.println();
+		Scanner unos = new Scanner (System.in);
+		System.out.println("Unesite broj koji se stepenuje");
+		int x = unos.nextInt();
+		
+		System.out.println("Unesite stepen : ");
+		int stepen = unos.nextInt();
+		int stepencopy = stepen;
+		int novibrojstepenovan = 1;
+		
+		while (stepen > 0 ) {
+			
+			
+			novibrojstepenovan *= x;
+			stepen --;
+			System.out.println("broj je :" + x + ", stepen je : " + stepen + ", a novi broj je :" + novibrojstepenovan);
 		}
+		
 	}
+
 
 }
