@@ -1,45 +1,29 @@
-package VjezbaZaIspit;
-
-import java.util.Scanner;
+package matrice;
 
 public class jedanaesti {
-
-	public static void main(String[] args) {
-		// Pronaći indeksnu poziciju poslednjeg razmaka u stringu,
-		// pretražujući od kraja stringa. Npr. za
-		// unijeto 'Pera ima devojku', rezultat je 8.
 	
-	Scanner unos = new Scanner (System.in);
-	String tekst = unos.next();
-	boolean indikatorrazmaka = false ;
-	
-	
-	int indekskraja = tekst.length() - 1;
-	
-	while (indekskraja >= 0 && !indikatorrazmaka) {
+	public static int droneudaljenost (int x, int y, int[] p_x, int[] p_y) {
 		
-		if (tekst.charAt(indekskraja) == ' ') {
-			
-			indikatorrazmaka = true;
+		int rastojanje = 0;
+		for (int i = 0 ; i < p_x.length;i ++) {
+			if (x > 0  && y > 0 ) {
+				int dx = p_x[i] - x;
+				int dy = p_y[i] - y;
+				double distanca = Math.sqrt(dx * dx + dy * dy);
+				rastojanje += distanca * 2 ;
+				
+				
+			}
 			
 		}
-		indekskraja++;
-		
-	}
-	if (indikatorrazmaka = false ) {
-		
-		System.out.println("poslednji razmak je na poziciji : " + indekskraja);
-	}else {
-		System.out.println(" u stringu nema razmakaa");
+		return rastojanje;
 		
 	}
 	
 	
 	
-	
-	
-	
-	
+	public static void main(String[] args) {
+
 	}
 
 }

@@ -1,40 +1,18 @@
-package VjezbaZaIspit;
-
-import java.util.Scanner;
+package drugagod;
 
 public class sedmi {
 
 	public static void main(String[] args) {
-		//Korisnik unosi n-tocifreni broj. Vas zadatak je da pronadjete sumu parnih
-		//cifara u tom broju i da pronadjete proizvod neparnih cifara u tom broju.
+
+		int x=2;
+		int n=5;
+		int broj =1;
 		
-		Scanner unos = new Scanner (System.in);
-		
-		System.out.println("Unesite n-tocifreni broj");
-		int n = unos.nextInt();
-		int n_copy= n;
-		int sumaparnih = 0;
-		int proizvodneparnih = 1;
-		
-		while (n>0 ) {
-			
-			int cifra = n%10;
-			if ( cifra % 2 == 0) {
-				sumaparnih += cifra; 
-				
-			}else {
-				
-				proizvodneparnih *= cifra;
-				
-					
-			}
-			
-			n = n/10;
+		for (int i = 0 ; i <= n-1 ; i ++) {
+			broj = broj * x;
 		}
 		
-		
-		System.out.println("Suma parnih brojeva u n broju je : " + sumaparnih + " a proizvod neparnih je :" + proizvodneparnih);
-		
+		System.out.println("x na n je " + broj);
 		
 		
 	}

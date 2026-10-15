@@ -1,25 +1,21 @@
-package VjezbaZaIspit;
+package drugagod;
 
 public class sesti {
 
 	public static void main(String[] args) {
 
-		/*Dimenzije pravougaonika su 543 i 130. Skicirati algoritam (napisati program) koji računa koliko kvadrata stranice 65
-		// je moguće izrezati iz tog pravougaonika.*/
 		
+		double r1 = 5;
+		double r2 = 7;
 		
-		int a = 543;
-		int b = 130;
-		int c = 65;
+		double o1 = 2*r1*Math.PI;
+		double o2 = 2*r2*Math.PI;
 		
-		int P = a * b ;
-		int R = c^2;
-		
-		int K = P / R;
-		
-		System.out.println("Moze stati : " + K);
-		
-		
+		if(o1>o2) {
+			System.out.println("Veci je " + o1 );
+		}else {
+			System.out.println("Veci je " + o2);
+		}
 		
 		
 	}

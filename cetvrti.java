@@ -1,31 +1,20 @@
-package predavanje;
-
-import java.util.Scanner;
+package drugagod;
 
 public class cetvrti {
 
 	public static void main(String[] args) {
 
-		int N, cifNM, cifNV;
-		Scanner u = new Scanner (System.in);
 		
-		System.out.print("Unesite N: ");
-		N = u.nextInt();
+		int cifra = 12345;
 		
-		if (N<0)
-			N = -N;
+		int a = cifra%10;
+		int b = (cifra/10)%10;
+		int sprat = a+b;
 		
-		cifNM = cifNV= N%10;
-		N = N /10;
+		System.out.println("Sprat je  " + sprat);
 		
-		while (N>0) {
-			cifNV = N%10;
-			N= N/10;
-		}
-		if ( cifNM == cifNV)
-		System.out.print("Iste");
-		else 
-			System.out.print("Razlicite");
+		
+		
 	}
 
 }
